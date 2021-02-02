@@ -5,7 +5,9 @@
   <ul>
     @foreach ($drinks as $drink)
       <li>
-        <a href="#"></a>
+        <a href="#">
+          {{ $drink -> name }}
+        </a>
       </li>
     @endforeach
   </ul>

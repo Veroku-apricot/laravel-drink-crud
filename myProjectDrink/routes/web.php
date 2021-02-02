@@ -2,4 +2,4 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/',);
+Route::get('/', 'MainController@index')->name('drink-index');

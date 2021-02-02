@@ -2,6 +2,7 @@
 
 @section('content')
   <h1>DRINKS</h1>
+  <a href="{{ route('create-drink') }}">ADD A DRINK</a>
   <ul>
     @foreach ($drinks as $drink)
       <li>

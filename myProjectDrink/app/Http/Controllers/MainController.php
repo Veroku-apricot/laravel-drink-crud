@@ -19,5 +19,19 @@ class MainController extends Controller
 
       $drink = Drink::findOrFail($id);
       return view('pages.drink', compact('drink'));
+
+    }
+
+    public function create() {
+
+      return view('pages.add-drink');
+
+    }
+
+    public function store(Request $request) {
+
+      Drink::create($request -> all());
+      return redirect()-> route('drink-index');
+
     }
 }

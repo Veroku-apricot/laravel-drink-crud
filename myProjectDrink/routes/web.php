@@ -11,3 +11,5 @@ Route::post('/store/drink', 'MainController@store') -> name('store-drink');
 
 Route::get('/edit/{id}', 'MainController@edit') -> name('edit-drink');
 Route::post('/update/{id}', 'MainController@update') -> name('update-drink');
+
+Route::get('/delete/{id}', 'MainController@delete') -> name('delete-drink');

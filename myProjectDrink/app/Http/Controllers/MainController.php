@@ -53,8 +53,8 @@ class MainController extends Controller
     public function delete($id) {
 
       $drink = Drink::findOrFail($id);
-      
-
+      $drink -> delete();
+      return redirect() -> route('drink-index');
 
     }
 }

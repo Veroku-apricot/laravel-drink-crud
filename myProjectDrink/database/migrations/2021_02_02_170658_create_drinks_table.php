@@ -17,7 +17,7 @@ class CreateDrinksTable extends Migration
             $table->id();
 
             $table->string('name');
-            $table->decimal('alcohol_content', 1, 2)->unsigned();
+            $table->decimal('alcohol_content', 8, 2)->unsigned();
             $table->integer('price')->unsigned();
 
             $table->timestamps();

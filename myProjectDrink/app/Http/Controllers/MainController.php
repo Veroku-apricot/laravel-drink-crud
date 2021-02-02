@@ -14,4 +14,10 @@ class MainController extends Controller
       return view('pages.home', compact('drinks'));
 
     }
+
+    public function show($id) {
+
+      $drink = Drink::findOrFail($id);
+      return view('pages.drink', compact('drink'));
+    }
 }

@@ -5,7 +5,7 @@
   <ul>
     @foreach ($drinks as $drink)
       <li>
-        <a href="#">
+        <a href="{{ route('drink-show', $drink -> id )}}">
           {{ $drink -> name }}
         </a>
       </li>

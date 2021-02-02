@@ -6,9 +6,11 @@
   <ul>
     @foreach ($drinks as $drink)
       <li>
-        <a href="{{ route('drink-show', $drink -> id )}}">
+        <a href="{{ route('drink-show', $drink -> id) }}">
           {{ $drink -> name }}
         </a>
+        <a href="{{ route('edit-drink', $drink -> id) }}">EDIT</a>
+        <a href="{{ route('delete-drink', $drink -> id) }}">DELETE</a>
       </li>
     @endforeach
   </ul>

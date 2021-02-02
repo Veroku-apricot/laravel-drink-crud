@@ -34,4 +34,27 @@ class MainController extends Controller
       return redirect()-> route('drink-index');
 
     }
+
+    public function edit($id) {
+
+      $drink = Drink::findOrFail($id);
+      return view('pages.edit-drink', compact('drink'));
+
+    }
+
+    public function update(Request $request, $id) {
+
+      $drink = Drink::findOrFail($id);
+      $drink -> update($request -> all());
+      return redirect() -> route('drink-index');
+
+    }
+
+    public function delete($id) {
+
+      $drink = Drink::findOrFail($id);
+      
+
+
+    }
 }

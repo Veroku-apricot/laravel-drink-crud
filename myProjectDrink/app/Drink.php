@@ -11,4 +11,10 @@ class Drink extends Model
     'alcohol_content',
     'price'
   ];
+
+  public function bottle() {
+
+    return $this -> belongsTo(Bottle::class);
+
+  }
 }
